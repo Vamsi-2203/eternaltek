@@ -7,7 +7,7 @@ import Aboutus from './AboutUs';
 import ContactUs from './ContactUs';
 import PrivacyPolicy from './Components/legal/PrivacyPolicy';
 import TermsandConditions from './Components/legal/TermsandConditions';
-// import Homepage from './Home';
+import Homepage from './Home';
 import ITServices from './Components/services/ITServices';
 import BPOServices from './Components/services/BPOServices';
 import EducationalServices from './Components/services/EducationalServices';
@@ -27,7 +27,7 @@ function App() {
    <Router>
       <Navbar />
       <Routes>
-        {/* <Route path="/" element={<Homepage/>} /> */}
+        <Route path="/" element={<Homepage/>} /> 
         <Route path="/about-us" element={<Aboutus />} />
         <Route path="/contact-us" element={<ContactUs/>}/>
         <Route path="/privacypolicy" element={<PrivacyPolicy/>}/>
