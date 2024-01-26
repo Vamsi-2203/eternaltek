@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* In your CSS file or styles */
+/* Add transition effects */
+/* For example purposes */
+/* You may need to adjust these styles based on your design */
+
+/* Fade in/out effect */
+/* index.css */
+/* Basic fade-in/fade-out effect */
+
+/* CSS for Animated Underline */
+/* Basic styling for the underline */
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #666; /* Default link color */
+  }
+  
+  /* Underline style */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #333; /* Color of the underline */
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out; /* Animation duration and easing */
+  }
+  
+  /* Underline animation on hover */
+  .nav-link:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  
+  /* Underline animation for the active link */
+  .nav-link.active::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .fade {
+    animation: fade-in 0.3s ease-in forwards;
+  }
+  
+  .fade-exit {
+    animation: fade-out 0.3s ease-out forwards;
+  }
+  
+
+  /* Add this CSS to your stylesheet */
+/* Add this CSS to your stylesheet */
+.card-container {
+  transition: transform 0.3s ease-in-out; /* Add a transition to the transform property */
+}
+
+.card-container:hover {
+  transform: translateY(-4px); /* Lift the card by translating it along the Y-axis */
+}
+
+
+/* In your CSS file */
+body {
+  background: linear-gradient(45deg, #93a5cf, #e4efe9);
+  background-size: 400% 400%;
+  animation: gradientBackground 10s ease infinite;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Blur effect */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Transition */
+.transition-max-height {
+  transition-property: max-height;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::selection{
+  color: darkmagenta;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+}
